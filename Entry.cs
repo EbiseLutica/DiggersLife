@@ -6,7 +6,7 @@ namespace DiggersLife
 	{
 		static void Main(string[] args)
 		{
-			Blocks.Init();
+			DiggersEngine.Init();
 			new RoutingGameBase<MainScene>(640, 480, "DiggersLife", 60).Run();
 		}
 	}
