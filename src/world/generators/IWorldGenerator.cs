@@ -4,8 +4,8 @@ namespace DiggersLife
 {
 	public interface IWorldGenerator
 	{
-		int Generate(VectorInt position);
+		short Generate(VectorInt position);
 
-		int Generate(int x, int y);
+		short Generate(int x, int y);
 	}
 }

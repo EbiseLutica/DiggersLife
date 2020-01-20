@@ -19,9 +19,9 @@ namespace DiggersLife
 
 		public abstract string UnlocalizedName { get; }
 
-		public abstract void OnInteract(VectorInt location, int blockState, IBlockEntity? blockEntity);
+		public abstract void OnInteract(VectorInt location, byte blockState, IBlockEntity? blockEntity, World world);
 
-		public abstract void OnBreak(VectorInt location, int blockState, IBlockEntity? blockEntity);
+		public abstract void OnBreak(VectorInt location, byte blockState, IBlockEntity? blockEntity, World world);
 
 		internal static string CreateName(string name) => "diggerslife.blocks." + name;
 	}

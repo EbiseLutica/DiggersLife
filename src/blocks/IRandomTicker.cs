@@ -4,6 +4,6 @@ namespace DiggersLife
 {
 	public interface IRandomTicker
 	{
-		void OnRandomTick(VectorInt location, int blockState, IBlockEntity? blockEntity);
+		void OnRandomTick(VectorInt location, byte blockState, IBlockEntity? blockEntity);
 	}
 }

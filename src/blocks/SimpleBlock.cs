@@ -17,9 +17,9 @@ namespace DiggersLife
 
 		public override string UnlocalizedName => unlocalizedName;
 
-		public override void OnInteract(VectorInt location, int blockState, IBlockEntity? blockEntity) { }
+		public override void OnInteract(VectorInt location, byte blockState, IBlockEntity? blockEntity, World world) { }
 
-		public override void OnBreak(VectorInt location, int blockState, IBlockEntity? blockEntity) { }
+		public override void OnBreak(VectorInt location, byte blockState, IBlockEntity? blockEntity, World world) { }
 
 		public SimpleBlock SetTexture(Resource? t)
 		{

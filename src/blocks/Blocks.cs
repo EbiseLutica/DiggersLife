@@ -41,13 +41,13 @@ namespace DiggersLife
 			.SetAppropriateTools(AppropriateTools.Pickaxe)
 			.SetUnlocalizedName(Block.CreateName("dirt"));
 
-		public static Block BlockOf(int id) => blocks[id];
+		public static Block BlockOf(short id) => blocks[id];
 
-		public static int IdOf(Block block) => blockIntMap[block];
+		public static short IdOf(Block block) => blockIdMap[block];
 
-		public static int ToId(this Block theBlock) => IdOf(theBlock);
+		public static short ToId(this Block theBlock) => IdOf(theBlock);
 
-		public static Block ToBlock(this int theId) => BlockOf(theId);
+		public static Block ToBlock(this short theId) => BlockOf(theId);
 
 		internal static void Init()
 		{
@@ -76,15 +76,15 @@ namespace DiggersLife
 
 		private static void SyncMaps()
 		{
-			blockIntMap.Clear();
+			blockIdMap.Clear();
 			foreach (var (b, i) in blocks.Select((b, i) => (b, i)))
 			{
-				blockIntMap[b] = i;
+				blockIdMap[b] = (short)i;
 			}
 		}
 
 		private static readonly List<Block> blocks = new List<Block>();
 
-		private static readonly Dictionary<Block, int> blockIntMap = new Dictionary<Block, int>();
+		private static readonly Dictionary<Block, short> blockIdMap = new Dictionary<Block, short>();
 	}
 }
