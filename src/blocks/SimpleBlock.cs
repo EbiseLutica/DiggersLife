@@ -7,7 +7,7 @@ namespace DiggersLife
 	/// </summary>
 	public class SimpleBlock : Block
 	{
-		public override Resource? Texture => texture;
+		public override Resource? GetTexture(byte _) => texture;
 
 		public override int Hardness => hardness;
 

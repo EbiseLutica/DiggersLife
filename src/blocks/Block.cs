@@ -9,7 +9,7 @@ namespace DiggersLife
 	{
 		public static readonly int UnbreakableHardness = -1;
 
-		public abstract Resource? Texture { get; }
+		public abstract Resource? GetTexture(byte blockState);
 
 		public abstract int Hardness { get; }
 
