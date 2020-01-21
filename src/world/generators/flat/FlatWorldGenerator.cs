@@ -13,7 +13,7 @@ namespace DiggersLife
 		public short Generate(int x, int y) =>
 		(
 			y == 0 ? Blocks.Bedrock :
-			y < Height - 7 ? Blocks.Stone :
+			y < Height - 3 ? Blocks.Stone :
 			y < Height ? Blocks.Dirt :
 			y == Height ? Blocks.Grass : Blocks.Air
 		).ToId();
